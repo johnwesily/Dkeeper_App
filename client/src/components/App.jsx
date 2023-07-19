@@ -12,7 +12,7 @@ function App() {
   useEffect(()=>{
 
     const getNotes=()=>{
-    axios.get("http://localhost:4000/api/notes/")
+    axios.get("https://dkeeper-app.onrender.com/api/notes/")
          .then((Response)=>{
           addItem(Response.data)
          })
@@ -27,7 +27,7 @@ function App() {
   function addNote(newnote) {
      
      const postNote= ()=>{
-      axios.post("http://localhost:4000/api/notes/",{
+      axios.post("https://dkeeper-app.onrender.com/api/notes/",{
         title:newnote.title,
         content:newnote.content
       })
@@ -49,7 +49,7 @@ function App() {
   function deleteNote(id ,event) {
 
     const performdelete=()=>{
-      axios.delete("http://localhost:4000/api/notes/"+id)
+      axios.delete("https://dkeeper-app.onrender.com/api/notes/"+id)
       .then((Response)=>{
         
         addItem((prev) => {
