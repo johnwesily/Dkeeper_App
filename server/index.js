@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 //middleware
 const corsOptions={
-   origin:"https://dkeeper-app-client.onrender.com/"
+   origin:"https://dkeeper-app-client.onrender.com"
 }
 
 app.use(cors(corsOptions));
